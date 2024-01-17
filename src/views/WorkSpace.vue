@@ -9,7 +9,7 @@
           </el-carousel-item>
         </el-carousel>
       </div>
-      <el-divider>追风赶月莫停留，平芜尽处是春山!</el-divider>
+      <el-divider>追风赶月莫停留，平芜尽处是春山 !</el-divider>
       <el-card class="background-card">
         <div style="display: inline-block;width: 620px;height: 300px">
           <h1>今日天气</h1>
@@ -238,7 +238,7 @@ export default {
   vertical-align: top;
 }
 .background-card {
-  background-image: url(D:\vscode\code\web04code\stage04-smartcampus-vue\src\views\course\图书馆.jpg);
+  background-image: url(/Users/yukuanfeng/Projects/smartcampus-vue/src/views/course/图书馆.jpg);
   background-size: cover; /* 背景图填充整个元素 */
 }
 

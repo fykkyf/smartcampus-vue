@@ -164,7 +164,7 @@ export default {
 }
 
 body {
-  background-image: url(D:\vscode\code\web04code\stage04-smartcampus-vue\src\views\pay\background\庄严.jpg);
+  background-image: url(/Users/yukuanfeng/Projects/smartcampus-vue/src/views/pay/background/庄严.jpg);
   background-size: cover;
 }
 </style>
