@@ -9,7 +9,7 @@
           </el-carousel-item>
         </el-carousel>
       </div>
-      <el-divider>追风赶月莫停留，平芜尽处是春山 !</el-divider>
+      <el-divider>wow，wow !</el-divider>
       <el-card class="background-card">
         <div style="display: inline-block;width: 620px;height: 300px">
           <h1>今日天气</h1>
