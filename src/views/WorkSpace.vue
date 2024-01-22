@@ -9,10 +9,10 @@
           </el-carousel-item>
         </el-carousel>
       </div>
-      <el-divider>wow，wow !</el-divider>
+      <el-divider>wow，wow    !</el-divider>
       <el-card class="background-card">
         <div style="display: inline-block;width: 620px;height: 300px">
-          <h1>今日天气</h1>
+          <h1>Weather</h1>
           <div id="he-plugin-standard"></div>
         </div>
         <div style="display: inline-block;width: 500px;margin-bottom: 60px">
@@ -28,7 +28,7 @@
           </div>
         </div>
       </el-card>
-      <el-divider>风来自很远的地方，去看看也无妨！</el-divider>
+      <el-divider>The wind comes from far away, so there’s no harm in going and taking a look!</el-divider>
       <div>
         <el-col :span="12">
           <el-card style="width: 95%;">
@@ -40,10 +40,10 @@
           <el-card>
           <div style="display: inline-block;height: 50px;margin-left: 100px">
             <el-button type="success" @click="clockIn" ref="clockInBtn" style="display: inline-block;margin-bottom: 40px">
-              上班打卡
+              clock in for work
             </el-button>
             <br>
-            <el-button type="success" @click="clockout" ref="clockOutBtn" style="display: inline-block;">下班打卡
+            <el-button type="success" @click="clockout" ref="clockOutBtn" style="display: inline-block;">clock out for work
             </el-button>
           </div>
           </el-card>
