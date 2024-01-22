@@ -1,26 +1,26 @@
 <template>
   <div class="container">
       <div style="padding-right: 1400px">
-    <button class="niceButton5" @click="toSelectElectiveCourse()"><span>返回</span></button>
+    <button class="niceButton5" @click="toSelectElectiveCourse()"><span>Return</span></button>
       </div>
-    <el-divider><i class="el-icon-sunny"></i>人丑就要多读书<i class="el-icon-sunny"></i></el-divider>
+    <el-divider><i class="el-icon-sunny"></i>Believe you can and you're halfway there.<i class="el-icon-sunny"></i></el-divider>
     <el-card class="box-card">
       <div class="section">
         <el-table :data="electiveCourses" border :cell-style="{ textAlign: 'center' }" :header-cell-style="{ textAlign: 'center' }">
-          <el-table-column prop="id" label="订单编号"></el-table-column>
-          <el-table-column prop="alipayNo" label="支付宝订单号"></el-table-column>
-          <el-table-column prop="type" label="类型"></el-table-column>
-          <el-table-column prop="amount" label="金额"></el-table-column>
-          <el-table-column prop="createTime" label="创建时间"></el-table-column>
-          <el-table-column prop="payTime" label="支付时间"></el-table-column>
-          <el-table-column prop="status" label="状态"></el-table-column>
-          <el-table-column label="操作" width="200" fixed="right">
+          <el-table-column prop="id" label="ID"></el-table-column>
+          <el-table-column prop="alipayNo" label="Order#"></el-table-column>
+          <el-table-column prop="type" label="Type"></el-table-column>
+          <el-table-column prop="amount" label="Amount"></el-table-column>
+          <el-table-column prop="createTime" label="Order Date"></el-table-column>
+          <el-table-column prop="payTime" label="Paid Date"></el-table-column>
+          <el-table-column prop="status" label="Status"></el-table-column>
+          <el-table-column label="Operations" width="200" fixed="right">
             <template slot-scope="scope">
-              <div v-if="scope.row.status === '已支付'">
-                <el-button size="mini" type="text" @click="pay(scope.row)" disabled>付费</el-button>
+              <div v-if="scope.row.status === 'Paid'">
+                <el-button size="mini" type="text" @click="pay(scope.row)" disabled>Pay</el-button>
               </div>
               <div v-else>
-                <el-button size="mini" type="text" @click="pay(scope.row)">付费</el-button>
+                <el-button size="mini" type="text" @click="pay(scope.row)">Pay</el-button>
               </div>
             </template>
           </el-table-column>
