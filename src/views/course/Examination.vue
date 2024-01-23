@@ -1,48 +1,48 @@
 <template>
   <div class="container">
-    <el-divider><i class="el-icon-sunny"></i>人丑就要多读书<i class="el-icon-sunny"></i></el-divider>
+    <el-divider><i class="el-icon-sunny"></i>Don't watch the clock; do what it does. Keep going.<i class="el-icon-sunny"></i></el-divider>
     <div class="section">
       <el-card class="box-card">
         <div class="section" style="padding-right: 1300px">
-          <el-button type="primary"  @click="show=true" >缓考免考申请</el-button>
+          <el-button type="primary"  @click="show=true" >Late Exam Apply</el-button>
         </div>
       </el-card>
     </div>
 
-    <el-divider><i class="el-icon-sunny"></i>人丑就要多读书<i class="el-icon-sunny"></i></el-divider>
+    <el-divider><i class="el-icon-sunny"></i>Don't watch the clock; do what it does. Keep going.<i class="el-icon-sunny"></i></el-divider>
     <el-card class="box-card">
       <div class="section">
         <el-table :data="examSchedules" border :cell-style="{ textAlign: 'center' }" :header-cell-style="{ textAlign: 'center' }">
-          <el-table-column prop="examScheduleId" label="考试编号" ></el-table-column>
-          <el-table-column prop="examTime" label="考试时间" ></el-table-column>
-          <el-table-column prop="classRoom" label="考试教室" ></el-table-column>
-          <el-table-column prop="courseName" label="课程" ></el-table-column>
-          <el-table-column prop="academicYear" label="学年" ></el-table-column>
-          <el-table-column prop="semester" label="学期" ></el-table-column>
+          <el-table-column prop="examScheduleId" label="Exam#" ></el-table-column>
+          <el-table-column prop="examTime" label="Exam Time" ></el-table-column>
+          <el-table-column prop="classRoom" label="Classroom" ></el-table-column>
+          <el-table-column prop="courseName" label="Course" ></el-table-column>
+          <el-table-column prop="academicYear" label="Year" ></el-table-column>
+          <el-table-column prop="semester" label="Semester" ></el-table-column>
         </el-table>
       </div>
     </el-card>
 
   <!--缓考免考申请-->
     <div>
-      <el-dialog title="申请表" :visible.sync="show" class="dialog-container">
+      <el-dialog title="Apply Form" :visible.sync="show" class="dialog-container">
         <div class="dialog-background">
           <el-form ref="examApplication" :model="examApplication" label-width="80px" class="form-container">
-            <el-form-item label="课程名称" prop="course">
-              <el-select v-model="examApplication.courseId" placeholder="请选择课程">
+            <el-form-item label="Course" prop="course">
+              <el-select v-model="examApplication.courseId" placeholder="Select">
                 <el-option v-for="c in courses" :key="c.courseId" :label="c.courseName" :value="c.courseId"></el-option>
               </el-select>
             </el-form-item>
-            <el-form-item label="类型" prop="type">
-              <el-select v-model="examApplication.type" placeholder="类型" clearable>
-                <el-option label="缓考" value="1"></el-option>
-                <el-option label="免考" value="2"></el-option>
+            <el-form-item label="type" prop="type">
+              <el-select v-model="examApplication.type" placeholder="type" clearable>
+                <el-option label="Extended" value="1"></el-option>
+                <el-option label="Exemption" value="2"></el-option>
               </el-select>
             </el-form-item>
           </el-form>
           <div slot="footer" class="dialog-footer">
-            <el-button type="primary" @click="resetForm()" class="btn btn-primary">取 消</el-button>
-            <el-button type="primary" @click="onSubmit()" class="btn btn-success">确 定</el-button>
+            <el-button type="primary" @click="resetForm()" class="btn btn-primary">Cancel</el-button>
+            <el-button type="primary" @click="onSubmit()" class="btn btn-success">Submit</el-button>
           </div>
         </div>
       </el-dialog>
